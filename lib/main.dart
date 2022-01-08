@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-            color: Colors.purple.shade200,
+            color: Colors.purple.shade50,
             border: Border.all(width: 5.0, color: Colors.grey),
             boxShadow: [
               BoxShadow(
@@ -50,33 +50,31 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Padding(
-              padding: const EdgeInsets.only(
-                top: 150.0,
-                left: 0.0,
-                bottom: 0.0,
-                right: 0.0,
-              ),
-              child: Text('GUESS\n''THE NUMBER' , style: TextStyle(fontSize: 30.0),),
-
-            ),
-
               Row(
                 
-                //mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 0.0,
-                      left: 200.0,
-                      bottom: 0.0,
-                      right: 0.0,
-                    ),
-                    child: Image.asset('assets/images/guess_logo.png', width: 200.0,),
-
+                 Image.asset('assets/images/guess_logo.png', width: 200.0,)
+                  ,Column(
+                    children: [
+                      Text(
+                        'GUESS',
+                        style: TextStyle(
+                            fontSize: 40.0, color: Colors.purple.shade500),
+                      ),
+                      Text(
+                        'THE NUMBER',
+                        style: TextStyle(
+                            fontSize: 26.0, color: Colors.purple.shade300),
+                      ),
+                    ],
                   ),
-
                 ],
+              ),
+
+              TextField(),
+              SizedBox(
+                height: 20,
               ),
               ElevatedButton(
                 child: Text('GUESS'),
